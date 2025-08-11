@@ -1,0 +1,153 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.landing-container {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  box-sizing: border-box;
+}
+
+.landing-heading {
+  font-size: clamp(1.5rem, 1vw + 1rem, 2.5rem);
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: -10px;
+}
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+
+.landing-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #374151;
+  margin-top: 1px; /* Reduced space between logo and text */
+}
+
+.landing-drone {
+  display: flex;
+  justify-content: center;
+}
+
+.drone-img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.landing-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.landing-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(31, 41, 55, 0.08);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: clamp(1.25rem, 1.5vw + 0.5rem, 2rem);
+  font-weight: 800;
+  color: #f97316;
+}
+
+.card-icon {
+  margin-top: 0.75rem;
+  color: #6b7280;
+}
+
+/* Large screens */
+@media (min-width: 1600px) {
+  .drone-img {
+    max-width: 1100px;
+  }
+  .logo-img {
+    max-width: 460px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .landing-grid {
+    grid-template-columns: 1fr;
+    padding: 0 3%;
+  }
+  .landing-cards {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .landing-card {
+    max-width: 200px;
+  }
+  .logo-img {
+    max-width: 300px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .landing-heading {
+    font-size: 1.5rem;
+  }
+  .drone-img {
+    max-width: 100%;
+  }
+  .landing-card {
+    max-width: 160px;
+    padding: 1rem;
+  }
+  .logo-img {
+    max-width: 260px;
+  }
+  .logo-text {
+    font-size: 1rem;
+    margin-top: 1px; /* Keep reduced space on small screens too */
+  }
+}
