@@ -1,5 +1,5 @@
 import React from "react";
-import logoImg from "../assets/aero.png";
+import logoImg from "../assets/logo.png";
 import droneImg from "../assets/image.png";
 import Box from "../assets/box.svg";
 import Clip from "../assets/clipboard.svg";
@@ -19,29 +19,31 @@ export default function Home() {
         </div>
 
         <div className="landing-cards">
-          <a
-            href="http://148.135.138.195/"
-            rel="noopener noreferrer"
+          <div
             className="landing-card"
-            style={{ textDecoration: "none", color: "inherit" }}
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              window.location.href = "http://148.135.138.195/app1/";
+            }}
           >
             <span className="card-title">IPMS</span>
             <div className="card-icon">
               <img src={Box} alt="Drone" className="drone-img" />
             </div>
-          </a>
+          </div>
 
-          <a
-            href="http://148.135.138.195/app2/"
-            rel="noopener noreferrer"
+          <div
             className="landing-card"
-            style={{ textDecoration: "none", color: "inherit" }}
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              window.location.href = "http://148.135.138.195/app2/";
+            }}
           >
             <span className="card-title">DTMS</span>
             <div className="card-icon">
               <img src={Clip} alt="Drone" className="drone-img" />
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
